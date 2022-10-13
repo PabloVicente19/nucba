@@ -69,29 +69,37 @@ const pizzas = [
     }
   ]
 
-pizzas.forEach( data => {    
-    const idImpar = () => {
-        if (data.id % 2 === 1 ){
-            console.log(`Las Pizzas con Numero de Id impar son: ${data.nombre} y su id es: ${data.id}.`)
-        }
-    }
-    const pizzaMasBarata = () => {
-        if ( data.precio < 600){
-            console.log(`La pizza mas Economica que ofrecemos es : ${ data.nombre} y cuesta: $${data.precio}.`)
-        }
-    }
-    const listadoDePizzas = () => {
-        console.log(`Las Pizzas que ofrecemos son: ${data.nombre} y su valor es de: $${data.precio}`)
-    }
+/*
+🔥 Crear una iteración del array que imprima en consola:
+a) Las pizzas que tengan un id impar.
+b) ¿Hay alguna pizza que valga menos de $600?
+c) El nombre de cada pizza con su respectivo precio.
+d) Todos los ingredientes de cada pizza (En cada iteración imprimir los ingredientes de la pizza actual). Ayuda: van a tener que realizar dos recorridos, ya que cada pizza del array de pizzas tiene un array de ingredientes. */
 
-    const listadoDeIngredientes = () => {
-        console.log(`${data.nombre} 
-        ${data.ingredientes}`)
-    }
-    idImpar()
-    listadoDeIngredientes()
-    pizzaMasBarata()
-    listadoDePizzas()
+// 1
+pizzas.filter(pizzas => {
+  if(pizzas.precio % 2 != 0){
+    console.log(`Las pizzas con id impar son: ${pizzas.nombre} y su id es: ${pizzas.id}`)
+  }
+})
 
-});
-  
+// 2
+const pizzaMenorA600 = (pizza) =>{pizza.precio < 600}
+pizzas.some(pizzaMenorA600)
+if(pizzaMenorA600){
+  console.log(true)
+}else{
+  console.log("no")
+}
+// 3
+pizzas.forEach(info =>{
+  console.log(`Nuestras pizzas son: ${info.nombre} y su precio es de: $${info.precio}`)
+})
+
+// 4
+pizzas.forEach(pizza =>{
+  console.log(`${pizza.nombre} tiene los siguientes ingredientes:`)
+  pizza.ingredientes.forEach(ingrediente => {
+    console.log(` ${ingrediente}`)
+  })
+})
