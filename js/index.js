@@ -1,3 +1,10 @@
+/*
+👉 El desafío será, al tocar el botón, capturar el valor ingresado en el input.
+👉 Renderizar en el contenedor un h2 con el nombre y en un h3 con el precio de la pizza cuyo id coincida con el numero ingresado en el input. 
+
+🚨 Si el número ingresado no coincide con ningún id, renderizar (no sirve un alert) un mensaje de error en el contenedor. 
+🚨 Si no se ingresa un número, renderizar (no sirve un alert) un mensaje de error diferente en el contenedor. 
+*/
 const pizzas = [
         {
             id : 1,
@@ -68,14 +75,6 @@ const pizzas = [
           precio: 2300,
         }
       ]
-/*
-👉 El desafío será, al tocar el botón, capturar el valor ingresado en el input.
-👉 Renderizar en el contenedor un h2 con el nombre y en un h3 con el precio de la pizza cuyo id coincida con el numero ingresado en el input. 
-
-🚨 Si el número ingresado no coincide con ningún id, renderizar (no sirve un alert) un mensaje de error en el contenedor. 
-🚨 Si no se ingresa un número, renderizar (no sirve un alert) un mensaje de error diferente en el contenedor. 
-*/
-      // Declaracion de variables
 const form = document.getElementById('form-contenedor');
 const input = document.getElementById('inputSearch');
 const nombrePizza = document.createElement('h2');
@@ -102,14 +101,14 @@ const alertError = () => {
 }
 
 const inputVacio = () => {
-  result.innerHTML = ` <h1> ¡ Por Favor ingrese un numero !`
+  result.innerHTML = ` <h1> ¡ Por Favor ingrese un número !`
   return main.append(result)
 }
 
 const tiempoDeCartel = () => {
   return setTimeout(() => {
     limpiarDiv()
-  }, 900)
+  }, 1000)
 }
 
 form.addEventListener('submit', e => {
