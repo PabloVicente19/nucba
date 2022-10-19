@@ -96,12 +96,12 @@ const crearCard = (pizza) => {
 
 const alertError = () => {
   result.innerHTML = `
-    <h1> Error: ¡ No existe esa pizza !</h1> `
+    <h2> Error: ¡ No existe esa pizza !</h2> `
   return main.append(result)
 }
 
 const inputVacio = () => {
-  result.innerHTML = ` <h1> ¡ Por Favor ingrese un número !`
+  result.innerHTML = ` <h2> ¡ Por Favor ingrese un número ! </h2>`
   return main.append(result)
 }
 
@@ -114,15 +114,17 @@ const tiempoDeCartel = () => {
 form.addEventListener('submit', e => {
     e.preventDefault(e);
     const valorObtenido = input.value;
+
     pizzas.forEach(pizza => {
       if (valorObtenido == pizza.id){
         limpiarDiv()
         crearCard(pizza)    
-      } })
+      } 
+    })
       if (valorObtenido == ""){
         inputVacio()
         tiempoDeCartel()
-      } else if (valorObtenido < 0 || valorObtenido >= 7){
+      }else if( valorObtenido > pizzas.length){ 
         alertError()
         tiempoDeCartel()
       }
