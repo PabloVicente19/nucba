@@ -21,9 +21,9 @@ body{
     background-position: center;
 }
 .container{
-    width: 100%;
+    width: 90%;
     max-width: 700%;
-    background-color: lightblue;
+    background-color: rgba(21, 27, 29, 0.568);
     border-radius: 10px;
 }
  .form-container{
@@ -35,12 +35,12 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 } 
 .input{
+    width: 250px;
     display: block;
     margin: 0 auto;
-    height: 30px;
+    height: 40px;
     border: 0;
     border-radius: 5px;
     text-indent: 20px;
@@ -49,14 +49,15 @@ input:focus{
     outline: none;
 }
 .btn{
-    width: 150px;
-    height: 35px;
+    width: 200px;
+    height: 40px;
     font-size: 1.2rem;
     margin-top: 10px ;
     border: 0;
     box-shadow: 1px 1px 1px #000;
     background-color: rgb(0, 174, 255);
     cursor: pointer;
+    border-radius: 5px;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -65,11 +66,49 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 } 
 .result{
-    height: 500px;
+    min-height: 300px;
     padding: 20px;
-    text-align: center;    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    font-size: 1.2rem;
+    color: #FFF;
 }
 .result img{
     width: 200px;
     height: 200px;
+}
+
+/* Id No encontrado */
+.id-error{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.id-error h2{
+    margin-top: 20px;
+}
+.id-error img{
+    width: 70px;
+    height: 70px;
+ 
+}
+
+/* INPUT VACIO */
+.input-vacio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    text-align: center;
+}
+.input-vacio h2{
+    margin-top: 20px;
+}
+.input-vacio img {
+    width: 70px;
+    height: 70px;
 }
