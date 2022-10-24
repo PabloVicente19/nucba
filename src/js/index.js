@@ -42,6 +42,9 @@ function mostrarPizza (pizza){
   </div>
   `
 }
+function guardarEnLocalStorage(pizza){
+  localStorage.setItem("pizza",JSON.stringify(pizza))
+}
 
 form.addEventListener('submit', e => {
   e.preventDefault(e);
@@ -54,10 +57,10 @@ form.addEventListener('submit', e => {
     idDistinto();
   }else{
     mostrarPizza(findPizza);
-
+    guardarEnLocalStorage(findPizza)
   }
-
-
   form.reset()
 })
-
+// MOSTRAR LA PIZZA ALMACENADA
+let obj = JSON.parse(localStorage.getItem("pizza"))
+mostrarPizza(obj)
