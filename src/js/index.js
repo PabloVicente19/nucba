@@ -11,11 +11,6 @@ Deberemos colocar un numero en el input y, al apretar el botón, deberá renderi
 ¿Cuál es el desafío final?
 Deberán guardar en localStorage la última pizza buscada y renderizada, y al recargar la página será esa pizza la que se deberá mostrar en la página. */
 
-
-// const form = document.getElementById("form");
-// const input = document.getElementById("input");
-// const result = document.querySelector(".result");
-
 function inputVacio (){
   result.innerHTML = `
   <div class="input-vacio">
