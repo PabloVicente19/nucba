@@ -30,8 +30,8 @@ function idDistinto (){
 function mostrarPizza (pizza){
   result.innerHTML = `
   <div class="pizza-encontrada">
-    <h2>nombre: ${pizza.nombre}</h2>
-    <h3>precio: $1${pizza.precio}</h3>
+    <h2>Nombre: ${pizza.nombre}</h2>
+    <h3>Precio: $1${pizza.precio}</h3>
     <p>Ingredientes: ${pizza.ingredientes}</p>
     <img src=${pizza.imagen}>
   </div>
@@ -56,6 +56,7 @@ form.addEventListener('submit', e => {
   }
   form.reset()
 })
+
 // MOSTRAR LA PIZZA ALMACENADA
 let obj = JSON.parse(localStorage.getItem("pizza"))
 mostrarPizza(obj)

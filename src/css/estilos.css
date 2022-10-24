@@ -112,4 +112,6 @@ margin: 0;
     width: 70px;
     height: 70px;
 }
-
+.pizza-encontrada h2, h3, p{
+    margin: 15px;
+}
