@@ -11,7 +11,7 @@ Deberemos colocar un numero en el input y, al apretar el botón, deberá renderi
 ¿Cuál es el desafío final?
 Deberán guardar en localStorage la última pizza buscada y renderizada, y al recargar la página será esa pizza la que se deberá mostrar en la página. */
 
-function inputVacio (){
+const inputVacio  = () =>{
   result.innerHTML = `
   <div class="input-vacio">
     <img src="./src/img/angry.png" alt="">
@@ -19,7 +19,7 @@ function inputVacio (){
   </div>
   `
 }
-function idDistinto (){
+const idDistinto = () =>{
   result.innerHTML = `
   <div class="id-error">
       <img class="icon-sad" src="./src/img/triste1.png" alt="">
@@ -27,7 +27,7 @@ function idDistinto (){
   </div>
   `
 }
-function mostrarPizza (pizza){
+const mostrarPizza = (pizza) =>{
   result.innerHTML = `
   <div class="pizza-encontrada">
     <h2>Nombre: ${pizza.nombre}</h2>
@@ -37,12 +37,13 @@ function mostrarPizza (pizza){
   </div>
   `
 }
-function guardarEnLocalStorage(pizza){
+const guardarEnLocalStorage = (pizza) =>{
   localStorage.setItem("pizza",JSON.stringify(pizza))
 }
 
 form.addEventListener('submit', e => {
   e.preventDefault(e);
+  
   const valorInput = Number(input.value);
   const findPizza = pizzas.find( (pizza) => pizza.id == valorInput);
 

@@ -112,6 +112,15 @@ margin: 0;
     width: 70px;
     height: 70px;
 }
+
+/* CARD DE LA PIZZA ENCONTRADA */
+.pizza-encontrada{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items:center ;
+}
 .pizza-encontrada h2, h3, p{
     margin: 15px;
 }
+
