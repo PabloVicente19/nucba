@@ -43,7 +43,6 @@ const guardarEnLocalStorage = (pizza) =>{
 
 form.addEventListener('submit', e => {
   e.preventDefault(e);
-  
   const valorInput = Number(input.value);
   const findPizza = pizzas.find( (pizza) => pizza.id == valorInput);
 
